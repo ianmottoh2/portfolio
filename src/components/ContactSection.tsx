@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Linkedin, Send, Check, Copy, MessageSquare, Sparkles, User, FileText } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Send, Check, Copy, MessageSquare, Sparkles, User, FileText, MessageCircleMore } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GlassCard } from './GlassCard';
+import Link from 'next/link';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -17,7 +18,7 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
@@ -37,13 +38,13 @@ export const ContactSection: React.FC = () => {
           Let's Build Something Exceptional
         </h2>
         <p className="text-xs sm:text-sm text-white/60 mt-1">
-          Open for full-stack web and mobile engineering positions, marketplace platform revamps, and technical leadership roles.
+          I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Direct Contact Info */}
-        <div className="lg:col-span-5 space-y-4">
+        <div className="lg:col-span-12 space-y-4">
           <GlassCard padding="medium" className="space-y-6 rounded-3xl border border-white/12">
             <h3 className="text-lg font-bold text-white pb-3 border-b border-white/10 flex items-center gap-2">
               <User className="w-5 h-5 text-white/80" />
@@ -78,9 +79,14 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="space-y-1">
                   <span className="text-white/50 text-xs font-medium block">Phone / WhatsApp</span>
-                  <a href={`tel:${PERSONAL_INFO.phone}`} className="font-semibold text-white hover:text-white/80 transition-colors">
-                    {PERSONAL_INFO.formattedPhone}
-                  </a>
+                  <Link
+                      target="_blank"
+                      href={PERSONAL_INFO.waLink}
+                      rel="noopener noreferrer nofollow"
+                      className="font-semibold text-white hover:text-white/80 transition-colors"
+                    >
+                      {PERSONAL_INFO.formattedPhone}
+                    </Link>
                 </div>
               </div>
 
@@ -114,20 +120,29 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/10 space-y-2">
+            <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2">
+              <Link
+                href={PERSONAL_INFO.waLink}
+                target='_blank'
+                rel="noopener noreferrer nofollow"
+                className="w-full bg-[#151515] hover:bg-[#222222] border border-white/15 text-white font-semibold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
+              >
+                <MessageCircleMore className="w-4 h-4 text-white/70" />
+                <span>WhatsApp Me</span>
+              </Link>
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
                 className="w-full bg-[#151515] hover:bg-[#222222] border border-white/15 text-white font-semibold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
               >
                 <Mail className="w-4 h-4 text-white/70" />
-                <span>Send Direct Email</span>
+                <span>Send Email</span>
               </a>
             </div>
           </GlassCard>
         </div>
 
         {/* Right Column: Interactive Message Form */}
-        <div className="lg:col-span-7">
+        {/* <div className="lg:col-span-7">
           <GlassCard padding="medium" className="space-y-6 rounded-3xl border border-white/12">
             <h3 className="text-lg font-bold text-white pb-3 border-b border-white/10 flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-white/80" />
@@ -210,7 +225,7 @@ export const ContactSection: React.FC = () => {
               </form>
             )}
           </GlassCard>
-        </div>
+        </div> */}
       </div>
     </section>
   );

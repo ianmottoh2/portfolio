@@ -17,13 +17,13 @@ export const GlassCard: React.FC<GlassCardProps> = ({
   className = '',
   hoverEffect = true,
   glowOnHover = true,
-  padding = 'medium',
+  padding = 'small',
   onClick,
   ...props
 }) => {
   const paddingClasses = {
     none: 'p-0',
-    small: 'p-4 sm:p-5',
+    small: 'p-2 sm:p-4',
     medium: 'p-6 sm:p-8',
     large: 'p-8 sm:p-10',
   };
@@ -51,7 +51,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       }
       className={`
         glass-panel backdrop-blur-3xl
-        rounded-2xl sm:rounded-3xl 
+        rounded-2xl
         relative overflow-hidden 
         transition-colors duration-300
         ${paddingClasses[padding]}

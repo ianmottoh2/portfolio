@@ -14,7 +14,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenCVModal }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  console.log("scrolled", scrolled)
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -86,8 +86,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-4 py-2.5 rounded-full text-xs font-medium text-white flex items-center gap-2 shadow-lg transition-all cursor-pointer"
           >
             <FileText className="w-3.5 h-3.5 text-white/70" />
-            <span className="hidden sm:inline">View Resume</span>
-            <span className="sm:hidden">CV</span>
+            {/* <span className="hidden sm:inline">View CV</span> */}
+            <span className="inline">View CV</span>
           </motion.button>
 
           {/* Mobile Menu Toggle Button */}
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden mt-3 max-w-6xl mx-auto glass-panel p-4 rounded-3xl border border-white/15 shadow-2xl pointer-events-auto"
+            className="md:hidden mt-3 max-w-6xl mx-auto saturated-glass p-4 rounded-3xl border border-white/15 shadow-2xl pointer-events-auto"
           >
             <div className="grid grid-cols-1 gap-2">
               {navItems.map((item) => {

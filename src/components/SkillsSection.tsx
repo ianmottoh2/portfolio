@@ -42,7 +42,7 @@ export const SkillsSection: React.FC = () => {
             Skills & Technical Stack
           </h2>
           <p className="text-xs sm:text-sm text-white/60 mt-1">
-            Proficiency across full-stack web, mobile native, database engineering, and automated testing tools.
+            Proficiency across full-stack web, mobile native, database, and testing tools.
           </p>
         </div>
 

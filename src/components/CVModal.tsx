@@ -67,14 +67,14 @@ Location: ${PERSONAL_INFO.location}
                 {copied ? <Check className="w-4 h-4 text-white" /> : <Copy className="w-4 h-4" />}
                 <span className="hidden sm:inline">{copied ? 'Copied!' : 'Copy Info'}</span>
               </button>
-              <button
+              {/* <button
                 onClick={handlePrint}
                 className="glass-button p-2.5 rounded-xl text-xs font-medium text-white/80 hover:text-white flex items-center gap-1.5"
                 title="Print CV"
               >
                 <Printer className="w-4 h-4" />
                 <span className="hidden sm:inline">Print / Save PDF</span>
-              </button>
+              </button> */}
               <button
                 onClick={onClose}
                 className="p-2.5 rounded-xl glass-panel text-white/70 hover:text-white hover:border-white/30 transition-colors"
@@ -107,7 +107,7 @@ Location: ${PERSONAL_INFO.location}
                   <span>{PERSONAL_INFO.email}</span>
                 </a>
                 <span>•</span>
-                <a href={`tel:${PERSONAL_INFO.phone}`} className="hover:text-white flex items-center gap-1">
+                <a href={PERSONAL_INFO.waLink} target='_blank' className="hover:text-white flex items-center gap-1">
                   <Phone className="w-3.5 h-3.5 text-white/60" />
                   <span>{PERSONAL_INFO.phone}</span>
                 </a>

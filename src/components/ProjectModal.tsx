@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, Github, CheckCircle2, Cpu, Layers, BarChart3, Building2, UserCheck } from 'lucide-react';
 import { Project } from '../types';
@@ -44,13 +45,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Modal Image Header */}
           <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden mb-6 group border border-white/10">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-              referrerPolicy="no-referrer"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e] via-[#1c1c1e]/50 to-transparent" />
             

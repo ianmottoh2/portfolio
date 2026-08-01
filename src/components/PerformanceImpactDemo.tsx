@@ -23,20 +23,20 @@ export const PerformanceImpactDemo: React.FC = () => {
       improvement: '-80% Drop',
       percentage: 80,
     },
-    {
-      label: 'Google Lighthouse Score',
-      ember: '52 / 100',
-      nextjs: '98 / 100',
-      improvement: '+46 Points',
-      percentage: 98,
-    },
-    {
-      label: 'Initial JS Bundle Size',
-      ember: '2.8 MB',
-      nextjs: '620 KB',
-      improvement: '-78% Smaller',
-      percentage: 78,
-    },
+    // {
+    //   label: 'Google Lighthouse Score',
+    //   ember: '52 / 100',
+    //   nextjs: '98 / 100',
+    //   improvement: '+46 Points',
+    //   percentage: 98,
+    // },
+    // {
+    //   label: 'Initial JS Bundle Size',
+    //   ember: '2.8 MB',
+    //   nextjs: '620 KB',
+    //   improvement: '-78% Smaller',
+    //   percentage: 78,
+    // },
     {
       label: 'Active Vehicle Listings',
       ember: '32,000',
@@ -52,14 +52,14 @@ export const PerformanceImpactDemo: React.FC = () => {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-medium text-white/80 border border-white/15 mb-2">
             <Zap className="w-3.5 h-3.5 text-white/60" />
-            <span>Architecture Migration Benchmark</span>
+            <span>Migration Benchmark</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <Gauge className="w-6 h-6 text-white/80" />
             Ember.js → Next.js Migration Impact
           </h3>
           <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-2xl">
-            Real performance telemetry achieved when Septian led the platform migration for momotor.id & momobil.id at Adira Finance.
+            Real performance telemetry achieved when I contributed the platform migration for momotor.id Adira Finance.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export const PerformanceImpactDemo: React.FC = () => {
       </div>
 
       {/* Architecture Highlights */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-xs">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-xs">
         <div className="glass-panel p-4 rounded-2xl border border-white/12 bg-white/[0.04] space-y-1">
           <div className="flex items-center gap-2 text-white/90 font-bold">
             <Server className="w-4 h-4 text-white/70" />
@@ -161,7 +161,7 @@ export const PerformanceImpactDemo: React.FC = () => {
             Optimized vehicle search queries with Express middleware & SQL indexing, supporting 103,000+ active vehicle listings effortlessly.
           </p>
         </div>
-      </div>
+      </div> */}
     </GlassCard>
   );
 };

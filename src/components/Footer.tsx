@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Linkedin, Github, Phone, MapPin, Check, Copy, Heart, ArrowUp } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, MapPin, Check, Copy, Heart, ArrowUp, MessageCircleMore } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ActiveTab } from '../types';
 
@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
   };
 
   return (
-    <footer className="mt-20 border-t border-white/10 relative z-10 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+    <footer className="sm:mt-20 border-t border-white/10 relative z-10 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
         {/* Top Glow Accent */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               <span className="text-gradient-cyan">{PERSONAL_INFO.preferredName}</span>
             </div>
             <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-md">
-              Full-Stack Developer specializing in high-performance vehicle marketplace platforms, Next.js migrations, real-time appraisal systems, and cross-platform mobile apps.
+              Full-stack developer with hands-on experience building and scaling consumer-facing vehicle marketplace platforms in Indonesia.
             </p>
             <div className="flex items-center gap-2 text-xs text-white/60">
               <MapPin className="w-3.5 h-3.5 text-cyan-400" />
@@ -64,11 +64,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('impact'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
-                  Migration Impact Simulator
-                </button>
-              </li>
-              <li>
                 <button onClick={() => { setActiveTab('contact'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
                   Contact & Inquiries
                 </button>
@@ -79,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           {/* Direct Email Copy & Socials */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider text-cyan-400">Get In Touch</h4>
-            <p className="text-xs text-white/60">Open for full-stack engineering roles, architecture consulting, and high-impact web/mobile projects.</p>
+            <p className="text-xs text-white/60">Open for full-stack engineering roles, and high-impact web/mobile projects.</p>
             
             <div className="glass-pill px-3.5 py-2 rounded-xl flex items-center justify-between border border-white/10 group">
               <span className="text-xs text-white/80 font-mono truncate mr-2">{PERSONAL_INFO.email}</span>
@@ -110,11 +105,12 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 <Mail className="w-4 h-4" />
               </a>
               <a
-                href={`tel:${PERSONAL_INFO.phone}`}
+                href={PERSONAL_INFO.waLink}
+                target='_blank'
                 className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
                 aria-label="Call Phone Number"
               >
-                <Phone className="w-4 h-4" />
+                <MessageCircleMore className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -123,12 +119,9 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <div>
-            © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
+            © {new Date().getFullYear()} {PERSONAL_INFO.name}.
           </div>
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1">
-              Crafted with <Heart className="w-3 h-3 text-cyan-400 inline" /> Next.js & Glassmorphism
-            </span>
             <button
               onClick={scrollToTop}
               className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-colors flex items-center gap-1"

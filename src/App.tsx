@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useCallback } from 'react';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'motion/react';
 import { GlowBackground } from './components/GlowBackground';
@@ -29,7 +30,7 @@ export default function App() {
   const [portfolioCategory, setPortfolioCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = useMemo(() => ['All', 'Full-Stack', 'Next.js & Frontend', 'Mobile', 'Tools & Systems'], []);
+  const categories = useMemo(() => ['All', 'Full-Stack', 'Tools & Systems'], []);
 
   const handleSelectProject = useCallback((project: Project) => {
     setSelectedProject(project);
@@ -96,7 +97,7 @@ export default function App() {
                   <div>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-medium text-white/80 border border-white/15 mb-2">
                       <Briefcase className="w-3 h-3 text-white/60" />
-                      <span>Featured Marketplace Systems</span>
+                      <span>Featured Portfolio</span>
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                       Featured Work Showcase
@@ -108,7 +109,7 @@ export default function App() {
                     onClick={() => setActiveTab('portfolio')}
                     className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-4 py-2 rounded-full text-xs font-medium text-white flex items-center gap-2 self-start sm:self-auto transition-all cursor-pointer"
                   >
-                    <span>View All Case Studies ({PROJECTS.length})</span>
+                    <span>View All Portfolio ({PROJECTS.length})</span>
                     <ArrowRight className="w-3.5 h-3.5 text-white/70" />
                   </button>
                 </div>
@@ -130,7 +131,7 @@ export default function App() {
               </section>
 
               {/* Technical Skills Preview */}
-              <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
                 <SkillsSection />
               </section>
             </motion.div>
@@ -143,7 +144,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
-              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-12 space-y-8"
+              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12 space-y-8"
             >
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-medium text-white/80 border border-white/15 mb-2">
@@ -151,11 +152,11 @@ export default function App() {
                   <span>Full Portfolio</span>
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                  Software Engineering Case Studies
+                  A collection of projects I've built and shipped.
                 </h1>
-                <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-2xl">
-                  Deep-dive architectures, migration strategies, inspection tools, mobile apps, and test suites engineered by Septian Mottoh.
-                </p>
+                {/* <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-2xl">
+                  Deep-dive architectures, migration strategies, inspection tools, mobile apps, and test suites i've engineered.
+                </p> */}
               </div>
 
               {/* Search & Filter Controls */}
@@ -237,20 +238,21 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
-              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-12 space-y-12"
+              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12 space-y-12"
             >
               {/* About Header Card */}
               <GlassCard padding="large" className="border border-white/15 rounded-3xl">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-4 flex justify-center">
-                    <img
-                      src={PERSONAL_INFO.avatar}
-                      alt={PERSONAL_INFO.name}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl object-cover border-2 border-white/20 shadow-2xl"
-                      referrerPolicy="no-referrer"
-                    />
+                    <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                      <Image
+                        src={PERSONAL_INFO.avatar}
+                        alt={PERSONAL_INFO.name}
+                        fill
+                        sizes="(max-width: 640px) 192px, 224px"
+                        className="object-cover object-center"
+                      />
+                    </div>
                   </div>
 
                   <div className="lg:col-span-8 space-y-4">
@@ -260,7 +262,7 @@ export default function App() {
                     </div>
 
                     <h1 className="text-3xl font-bold text-white tracking-tight">
-                      Full-Stack Web & Mobile Engineer
+                      Full-Stack Developer
                     </h1>
 
                     <p className="text-xs sm:text-sm text-white/70 leading-relaxed">
@@ -295,33 +297,6 @@ export default function App() {
             </motion.div>
           )}
 
-          {activeTab === 'impact' && (
-            <motion.div
-              key="impact"
-              initial={{ opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.35 }}
-              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-12 space-y-12"
-            >
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-semibold text-blue-400 border border-blue-500/30 mb-2">
-                  <Zap className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Engineering Telemetry</span>
-                </div>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                  Performance Impact & Metrics
-                </h1>
-                <p className="text-xs sm:text-sm text-zinc-400 mt-1 max-w-2xl">
-                  Inspect the migration results and algorithms engineered for Adira Finance platforms.
-                </p>
-              </div>
-
-              {/* Performance Migration Telemetry */}
-              <PerformanceImpactDemo />
-            </motion.div>
-          )}
-
           {activeTab === 'contact' && (
             <motion.div
               key="contact"
@@ -329,7 +304,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
-              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-12"
+              className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12"
             >
               <ContactSection />
             </motion.div>

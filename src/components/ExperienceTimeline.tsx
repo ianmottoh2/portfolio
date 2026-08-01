@@ -18,7 +18,7 @@ export const ExperienceTimeline: React.FC = () => {
           Work Experience & Education
         </h2>
         <p className="text-xs sm:text-sm text-white/60 mt-1">
-          Full-stack engineering leadership across high-scale automotive marketplaces and mobile ecosystems.
+          Full-stack engineering across high-scale automotive marketplaces and mobile ecosystems.
         </p>
       </div>
 
@@ -27,7 +27,7 @@ export const ExperienceTimeline: React.FC = () => {
         {WORK_EXPERIENCE.map((exp) => (
           <div key={exp.id} className="relative group">
             {/* Timeline Node Point */}
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#2a2a2d] border-2 border-white/80 group-hover:scale-125 transition-transform shadow-md" />
+            <div className="absolute -left-[33px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-[#2a2a2d] border-2 border-white/80 group-hover:scale-125 transition-transform shadow-md" />
 
             <GlassCard padding="large" className="space-y-4 border border-white/12 hover:border-white/25 rounded-3xl">
               {/* Header Info */}

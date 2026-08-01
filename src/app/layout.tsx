@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Septian Mottoh - Senior Full-Stack & Platform Engineer',
-  description: 'Portfolio & Engineering Benchmarks of Septian Mottoh - Ex-Adira Finance, Traveloka, Momotor, Momobil Senior Software Engineer.',
+  title: 'Septian Mottoh - Full-Stack Developer',
+  description: 'Portfolio & Engineering Benchmarks of Septian Mottoh.',
 };
 
 export default function RootLayout({
