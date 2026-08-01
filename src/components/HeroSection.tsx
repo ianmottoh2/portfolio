@@ -104,7 +104,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setActiveTab, onOpenCV
           {STATS.map((stat, idx) => (
             <GlassCard
               key={idx}
-              padding="small"
+              padding="medium"
               onClick={() => handleClickPills(stat)}
               className="text-center hover:border-white/25 transition-all group border-white/10 rounded-2xl cursor-pointer"
             >

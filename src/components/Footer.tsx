@@ -26,8 +26,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
   return (
     <footer className="sm:mt-20 border-t border-white/10 relative z-10 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
-        {/* Top Glow Accent */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8">
           {/* Brand & Tagline */}
@@ -39,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               Full-stack developer with hands-on experience building and scaling consumer-facing vehicle marketplace platforms in Indonesia.
             </p>
             <div className="flex items-center gap-2 text-xs text-white/60">
-              <MapPin className="w-3.5 h-3.5 text-cyan-400" />
+              <MapPin className="w-3.5 h-3.5 text-sky-500" />
               <span>{PERSONAL_INFO.location}</span>
             </div>
           </div>

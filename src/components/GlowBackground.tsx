@@ -42,35 +42,6 @@ export const GlowBackground: React.FC = () => {
         }}
         className="absolute top-1/3 -left-20 w-[40rem] h-[40rem] rounded-full bg-[#4338CA]/15 blur-[150px] pointer-events-none transform-gpu will-change-transform"
       />
-
-      {/* Blob 3: Cool Zinc Ambient Glow (Bottom Right) */}
-      <motion.div
-        animate={{
-          x: [0, 40, -50, 0],
-          y: [0, -30, 60, 0],
-          scale: [1, 1.1, 0.95, 1],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        className="absolute bottom-10 right-10 w-[38rem] h-[38rem] rounded-full bg-[#38BDF8]/12 blur-[140px] pointer-events-none transform-gpu will-change-transform"
-      />
-
-      {/* Blob 4: Soft Studio Overhead Highlight */}
-      <motion.div
-        animate={{
-          opacity: [0.04, 0.08, 0.04],
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[55rem] h-[32rem] rounded-full bg-white/[0.08] blur-[140px] pointer-events-none transform-gpu will-change-transform"
-      />
       
       {/* Bottom Ambient Dark Falloff */}
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />

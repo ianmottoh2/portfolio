@@ -76,7 +76,7 @@ export default function App() {
 
       {/* Main View Area */}
       <main className="relative z-10">
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait"> */}
           {activeTab === 'home' && (
             <motion.div
               key="home"
@@ -309,7 +309,7 @@ export default function App() {
               <ContactSection />
             </motion.div>
           )}
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
       </main>
 
       {/* Persistent Glass Footer */}

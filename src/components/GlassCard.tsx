@@ -17,7 +17,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
   className = '',
   hoverEffect = true,
   glowOnHover = true,
-  padding = 'small',
+  padding = 'medium',
   onClick,
   ...props
 }) => {
