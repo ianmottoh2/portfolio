@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, onSelect
   return (
     <GlassCard
       // onClick={() => onSelect(project)}
-      padding="small"
+      padding="medium"
       className="flex flex-col justify-between h-full group cursor-pointer border border-white/12 hover:border-white/25"
     >
       <div className="space-y-4">
