@@ -102,14 +102,14 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               >
                 <Mail className="w-4 h-4" />
               </a>
-              <a
+              {/* <a
                 href={PERSONAL_INFO.waLink}
                 target='_blank'
                 className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
                 aria-label="Call Phone Number"
               >
                 <MessageCircleMore className="w-4 h-4" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

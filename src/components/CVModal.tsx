@@ -17,12 +17,11 @@ export const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(`
-Septian Feldy Leonard Mottoh
-Full-Stack Web Developer | momotor.id & momobil.id
-Email: ${PERSONAL_INFO.email}
-Phone: ${PERSONAL_INFO.phone}
-LinkedIn: ${PERSONAL_INFO.linkedin}
-Location: ${PERSONAL_INFO.location}
+      Septian Feldy Leonard Mottoh
+      Full-Stack Web Developer | momotor.id & momobil.id
+      Email: ${PERSONAL_INFO.email}
+      LinkedIn: ${PERSONAL_INFO.linkedin}
+      Location: ${PERSONAL_INFO.location}
     `);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -107,11 +106,11 @@ Location: ${PERSONAL_INFO.location}
                   <span>{PERSONAL_INFO.email}</span>
                 </a>
                 <span>•</span>
-                <a href={PERSONAL_INFO.waLink} target='_blank' className="hover:text-white flex items-center gap-1">
+                {/* <a href={PERSONAL_INFO.waLink} target='_blank' className="hover:text-white flex items-center gap-1">
                   <Phone className="w-3.5 h-3.5 text-white/60" />
                   <span>{PERSONAL_INFO.phone}</span>
                 </a>
-                <span>•</span>
+                <span>•</span> */}
                 <span className="flex items-center gap-1">
                   <MapPin className="w-3.5 h-3.5 text-white/60" />
                   <span>{PERSONAL_INFO.location}</span>
