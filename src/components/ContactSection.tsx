@@ -73,7 +73,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Phone */}
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <div className="p-2.5 rounded-xl bg-white/10 text-white/80 border border-white/12 shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
@@ -88,7 +88,7 @@ export const ContactSection: React.FC = () => {
                       {PERSONAL_INFO.formattedPhone}
                     </Link>
                 </div>
-              </div>
+              </div> */}
 
               {/* Location */}
               <div className="flex items-start gap-3">
@@ -121,7 +121,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2">
-              <Link
+              {/* <Link
                 href={PERSONAL_INFO.waLink}
                 target='_blank'
                 rel="noopener noreferrer nofollow"
@@ -129,7 +129,7 @@ export const ContactSection: React.FC = () => {
               >
                 <MessageCircleMore className="w-4 h-4 text-white/70" />
                 <span>WhatsApp Me</span>
-              </Link>
+              </Link> */}
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
                 className="w-full bg-[#151515] hover:bg-[#222222] border border-white/15 text-white font-semibold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
