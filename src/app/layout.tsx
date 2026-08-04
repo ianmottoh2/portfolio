@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import metaIcon from '../assets/images/metaIcon.jpeg';
 
 export const metadata: Metadata = {
   title: 'Septian Mottoh - Full-Stack Developer',
   description: 'Portfolio & Engineering Benchmarks of Septian Mottoh.',
+  icons: {
+    icon: metaIcon.src
+  }
 };
 
 export default function RootLayout({

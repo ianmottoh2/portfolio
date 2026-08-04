@@ -1,11 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Linkedin, Send, Check, Copy, MessageSquare, Sparkles, User, FileText, MessageCircleMore } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Send, Check, Copy, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GlassCard } from './GlassCard';
-import Link from 'next/link';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -28,7 +26,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="space-y-8">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12 space-y-8">
       <div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-medium text-white/80 border border-white/15 mb-2">
           <Send className="w-3.5 h-3.5 text-white/60" />

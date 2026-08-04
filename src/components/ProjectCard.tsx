@@ -2,8 +2,7 @@
 
 import React, { memo } from 'react';
 import Image from 'next/image';
-import { motion } from 'motion/react';
-import { ExternalLink, Github, ArrowUpRight, BarChart3, Building2, Sparkles } from 'lucide-react';
+import { ExternalLink, BarChart3, Building2 } from 'lucide-react';
 import { Project } from '../types';
 import { GlassCard } from './GlassCard';
 
@@ -15,7 +14,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, onSelect }) => {
   return (
     <GlassCard
-      // onClick={() => onSelect(project)}
+      onClick={() => onSelect(project)}
       padding="medium"
       className="flex flex-col justify-between h-full group cursor-pointer border border-white/12 hover:border-white/25"
     >

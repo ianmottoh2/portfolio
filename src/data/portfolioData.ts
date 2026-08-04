@@ -1,6 +1,6 @@
 import { Project, WorkExperience, SkillCategory, Education, Certification, StatItem } from '../types';
 
-import septianAvatarImport from '../assets/images/profilePhoto.png';
+import septianAvatarImport from '../assets/images/profilePhoto.jpg';
 import momotorImageImport from '../assets/images/momotor.png';
 import momobilImageImport from '../assets/images/momobil.png';
 import taksasiImageImport from '../assets/images/digital-taksasi.png';
