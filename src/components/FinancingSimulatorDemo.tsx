@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Calculator, DollarSign, Calendar, Shield, Percent, Sparkles, Car, Bike, ArrowRight } from 'lucide-react';

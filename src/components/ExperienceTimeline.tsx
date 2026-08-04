@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'motion/react';
-import { Briefcase, Building2, Calendar, MapPin, CheckCircle2, GraduationCap, Award, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, GraduationCap, Award } from 'lucide-react';
 import { WORK_EXPERIENCE, EDUCATION, CERTIFICATIONS } from '../data/portfolioData';
 import { GlassCard } from './GlassCard';
 

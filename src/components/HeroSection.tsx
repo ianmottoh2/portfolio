@@ -1,33 +1,18 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
-import { motion } from 'motion/react';
-import { ArrowRight, FileText, Sparkles, Code2, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO, STATS } from '../data/portfolioData';
 import { GlassCard } from './GlassCard';
-import { LiquidBackground } from './LiquidBackground';
-import { ActiveTab } from '../types';
+import { TabButton } from './TabButton';
+import { useNavigation } from './NavigationContext';
 
-const HeroScene = dynamic(() => import('./HeroScene'), {
-  ssr: false,
-});
-
-interface HeroSectionProps {
-  setActiveTab: (tab: ActiveTab) => void;
-  onOpenCVModal: () => void;
-}
-
-export const HeroSection: React.FC<HeroSectionProps> = ({ setActiveTab, onOpenCVModal }) => {
+export const HeroSection: React.FC = () => {
+  const { setActiveTab } = useNavigation();
 
   const handleClickPills = (data: { value: string } | undefined) => {
     if (data?.value === '3+') setActiveTab('about');
     else setActiveTab('portfolio');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleActionClick = (tab: ActiveTab) => {
-    setActiveTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -42,15 +27,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setActiveTab, onOpenCV
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
                 Hi, I'm {PERSONAL_INFO.preferredName}
               </h1>
-              {/* <p className="text-lg sm:text-2xl font-medium text-white/90 leading-snug">
-                Building and scaling consumer-facing vehicle marketplace platforms in Indonesia. Passionate about performant, mobile-optimized code that works for every user — including those on low-end devices in emerging markets.
-              </p> */}
             </div>
 
-            {/* Narrative Intro */}
-            {/* <p className="text-sm sm:text-base text-white/60 leading-relaxed max-w-3xl">
-              Contributed in a cross-functional migration from Ember.js to Next.js for <strong className="text-white font-semibold">momotor.id</strong> & <strong className="text-white font-semibold">momobil.id</strong> that cut load times by <strong className="text-white font-bold">70%</strong> and reduced bounce rates by <strong className="text-white font-bold">80%</strong>. Engineered tools serving <strong className="text-white font-semibold">103,000+</strong> vehicle listings and <strong className="text-white font-semibold">11,400+</strong> digital appraisals.
-            </p> */}
             <p className="text-lg sm:text-2xl text-white/60 leading-relaxed font-medium max-w-4xl">
               Full Stack Developer building scalable, high-performance, mobile-optimized web
               applications. Currently delivering digital products at
@@ -58,43 +36,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setActiveTab, onOpenCV
               <strong className="text-white font-semibold">Adira Finance</strong>.
             </p>
 
-            
-
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleActionClick('contact')}
+              <TabButton
+                tab="contact"
                 className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white flex items-center gap-2 shadow-xl transition-all group cursor-pointer"
               >
                 <span>Contact Me</span>
                 <ArrowRight className="w-4 h-4 text-white/70 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </TabButton>
 
-              <button
-                type="button"
-                onClick={() => handleActionClick('portfolio')}
+              <TabButton
+                tab="portfolio"
                 className="glass-button px-5 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white/80 hover:text-white flex items-center gap-2 cursor-pointer"
               >
                 <span>View Portfolio</span>
-              </button>
-              
-              <button
-                type="button"
-                onClick={() => handleActionClick('about')}
+              </TabButton>
+
+              <TabButton
+                tab="about"
                 className="glass-button px-5 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white/80 hover:text-white flex items-center gap-2 cursor-pointer"
               >
                 <span>About & Experience</span>
-              </button>
-
-              {/* <button
-                type="button"
-                onClick={onOpenCVModal}
-                className="glass-button px-5 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white/80 hover:text-white flex items-center gap-2 cursor-pointer"
-              >
-                <FileText className="w-4 h-4 text-white/70" />
-                <span>View Resume</span>
-              </button> */}
+              </TabButton>
             </div>
           </div>
         </GlassCard>
@@ -112,7 +76,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setActiveTab, onOpenCV
                 {stat.value}
               </div>
               <div className="text-xs font-semibold text-white/90 mt-1">{stat.label}</div>
-              {/* <div className="text-[10px] text-white/50 mt-1 line-clamp-2">{stat.description}</div> */}
             </GlassCard>
           ))}
         </div>
