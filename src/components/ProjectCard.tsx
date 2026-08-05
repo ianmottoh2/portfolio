@@ -8,10 +8,10 @@ import { GlassCard } from './GlassCard';
 
 interface ProjectCardProps {
   project: Project;
-  onSelect: (project: Project) => void;
+  // onSelect: (project: Project) => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, onSelect }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project }) => { //onSelect
   return (
     <GlassCard
       // onClick={() => onSelect(project)}
