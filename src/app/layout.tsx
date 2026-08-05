@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import metaIcon from '../assets/images/metaIcon.jpeg';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'Septian Mottoh - Full-Stack Developer',
@@ -19,6 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen text-white bg-[#212124] antialiased selection:bg-white/20 selection:text-white">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
