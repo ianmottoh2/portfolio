@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
                   <a
                     href={PERSONAL_INFO.linkedin}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="font-semibold text-white hover:underline"
                   >
                     linkedin.com/in/septian-mottoh

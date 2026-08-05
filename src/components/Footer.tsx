@@ -89,7 +89,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               <a
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
                 aria-label="LinkedIn Profile"
               >

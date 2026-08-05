@@ -8,13 +8,13 @@ import { GlassCard } from './GlassCard';
 
 interface ProjectCardProps {
   project: Project;
-  onSelect: (project: Project) => void;
+  // onSelect: (project: Project) => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, onSelect }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project }) => { //onSelect
   return (
     <GlassCard
-      onClick={() => onSelect(project)}
+      // onClick={() => onSelect(project)}
       padding="medium"
       className="flex flex-col justify-between h-full group cursor-pointer border border-white/12 hover:border-white/25"
     >
