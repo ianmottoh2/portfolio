@@ -96,7 +96,7 @@ export const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
               </p>
               
               <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/70">
-                <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">
+                <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
                   <Linkedin className="w-3.5 h-3.5 text-white/60" />
                   <span>LinkedIn Profile</span>
                 </a>

@@ -14,7 +14,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, onSelect }) => {
   return (
     <GlassCard
-      onClick={() => onSelect(project)}
+      // onClick={() => onSelect(project)}
       padding="medium"
       className="flex flex-col justify-between h-full group cursor-pointer border border-white/12 hover:border-white/25"
     >

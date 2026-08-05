@@ -29,7 +29,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects }) => {
           <ProjectCard
             key={project.id}
             project={project}
-            onSelect={handleSelectProject}
+            // onSelect={handleSelectProject}
           />
         ))}
       </div>
