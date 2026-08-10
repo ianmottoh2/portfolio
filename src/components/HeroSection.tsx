@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-20 sm:pt-32 sm:pb-12 overflow-hidden">
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 sm:pb-12 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
         {/* Top Hero Glass Card Grid */}
         <GlassCard className="p-8 sm:p-12 relative overflow-hidden border border-white/15 bg-white/[0.08] shadow-2xl rounded-3xl">
@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
               </h1>
             </div>
 
-            <p className="text-lg sm:text-2xl text-white/60 leading-relaxed font-medium max-w-4xl">
+            <p className="text-lg sm:text-2xl text-white/70 leading-relaxed font-medium max-w-4xl">
               Full Stack Developer building scalable, high-performance, mobile-optimized web
               applications. Currently delivering digital products at
               {" "}
@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <TabButton
                 tab="contact"
-                className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white flex items-center gap-2 shadow-xl transition-all group cursor-pointer"
+                className="bg-[#0c0d10] hover:bg-[#171a1f] border border-white/15 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white flex items-center gap-2 shadow-xl transition-all group cursor-pointer"
               >
                 <span>Contact Me</span>
                 <ArrowRight className="w-4 h-4 text-white/70 group-hover:translate-x-1 transition-transform" />

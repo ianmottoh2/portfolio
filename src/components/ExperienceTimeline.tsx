@@ -14,7 +14,7 @@ export const ExperienceTimeline: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
           Work Experience & Education
         </h2>
-        <p className="text-xs sm:text-sm text-white/60 mt-1">
+        <p className="text-xs sm:text-sm text-white/70 mt-1">
           Full-stack engineering across high-scale automotive marketplaces and mobile ecosystems.
         </p>
       </div>
@@ -45,7 +45,7 @@ export const ExperienceTimeline: React.FC = () => {
                     <span>{exp.period}</span>
                   </div>
                   <div className="flex items-center gap-1.5 mt-0.5 text-white/60">
-                    <MapPin className="w-3.5 h-3.5 text-white/50" />
+                    <MapPin className="w-3.5 h-3.5 text-white/60" />
                     <span>{exp.location}</span>
                   </div>
                 </div>

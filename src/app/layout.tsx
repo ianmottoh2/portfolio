@@ -96,7 +96,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen text-white bg-[#212124] antialiased selection:bg-white/20 selection:text-white">
+      <body className="min-h-screen text-white bg-[#060607] antialiased selection:bg-white/20 selection:text-white">
         {children}
         <script
           type="application/ld+json"

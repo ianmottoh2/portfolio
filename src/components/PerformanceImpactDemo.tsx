@@ -58,7 +58,7 @@ export const PerformanceImpactDemo: React.FC = () => {
             <Gauge className="w-6 h-6 text-white/80" />
             Ember.js → Next.js Migration Impact
           </h3>
-          <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-2xl">
+          <p className="text-xs sm:text-sm text-white/70 mt-1 max-w-2xl">
             Real performance telemetry achieved when I contributed the platform migration for momotor.id Adira Finance.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const PerformanceImpactDemo: React.FC = () => {
               ) : (
                 <span className="text-white/60">{m.ember}</span>
               )}
-              <span className="text-xs text-white/40 font-normal ml-2">
+              <span className="text-xs text-white/60 font-normal ml-2">
                 (was {m.ember})
               </span>
             </div>

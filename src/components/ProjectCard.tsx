@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project }) => { /
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-fit object-center group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#18181a] via-transparent to-transparent opacity-85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050506] via-transparent to-transparent opacity-85" />
 
           {/* Top Badges */}
           {/* <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
@@ -58,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project }) => { /
             <span>{project.title}</span>
             {/* <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" /> */}
           </h3>
-          <p className="text-xs font-medium text-white/50">{project.subtitle}</p>
+          <p className="text-xs font-medium text-white/60">{project.subtitle}</p>
           <p className="text-xs text-white/70 line-clamp-2 leading-relaxed pt-1">
             {project.shortDescription}
           </p>
@@ -85,7 +85,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = memo(({ project }) => { /
             </span>
           ))}
           {project.techStack.length > 4 && (
-            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/[0.06] text-white/40 border border-white/10">
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/[0.06] text-white/60 border border-white/10">
               +{project.techStack.length - 4}
             </span>
           )}

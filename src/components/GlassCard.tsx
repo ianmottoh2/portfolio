@@ -50,7 +50,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
           : undefined
       }
       className={`
-        glass-panel backdrop-blur-3xl
+        glass-panel
         rounded-2xl
         relative overflow-hidden 
         transition-colors duration-300

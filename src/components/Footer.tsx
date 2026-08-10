@@ -37,32 +37,32 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               Full-stack developer with hands-on experience building and scaling consumer-facing vehicle marketplace platforms in Indonesia.
             </p>
             <div className="flex items-center gap-2 text-xs text-white/60">
-              <MapPin className="w-3.5 h-3.5 text-sky-500" />
+              <MapPin className="w-3.5 h-3.5 text-[#5B8DEF]" />
               <span>{PERSONAL_INFO.location}</span>
             </div>
           </div>
 
           {/* Quick Navigation Links */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider text-cyan-400">Quick Nav</h4>
-            <ul className="space-y-2 text-xs font-medium text-white/70">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider text-[#5B8DEF]">Quick Nav</h4>
+            <ul className="space-y-2 text-xs font-medium text-white/75">
               <li>
-                <button onClick={() => { setActiveTab('home'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
+                <button onClick={() => { setActiveTab('home'); scrollToTop(); }} className="hover:text-[#7ba6f7] transition-colors">
                   Home Overview
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('portfolio'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
+                <button onClick={() => { setActiveTab('portfolio'); scrollToTop(); }} className="hover:text-[#7ba6f7] transition-colors">
                   Portfolio & Case Studies
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('about'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
+                <button onClick={() => { setActiveTab('about'); scrollToTop(); }} className="hover:text-[#7ba6f7] transition-colors">
                   About Me & Work History
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('contact'); scrollToTop(); }} className="hover:text-cyan-300 transition-colors">
+                <button onClick={() => { setActiveTab('contact'); scrollToTop(); }} className="hover:text-[#7ba6f7] transition-colors">
                   Contact & Inquiries
                 </button>
               </li>
@@ -71,14 +71,14 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
 
           {/* Direct Email Copy & Socials */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider text-cyan-400">Get In Touch</h4>
-            <p className="text-xs text-white/60">Open for full-stack engineering roles, and high-impact web/mobile projects.</p>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider text-[#5B8DEF]">Get In Touch</h4>
+            <p className="text-xs text-white/70">Open for full-stack engineering roles, and high-impact web/mobile projects.</p>
             
             <div className="glass-pill px-3.5 py-2 rounded-xl flex items-center justify-between border border-white/10 group">
               <span className="text-xs text-white/80 font-mono truncate mr-2">{PERSONAL_INFO.email}</span>
               <button
                 onClick={handleCopyEmail}
-                className="p-1.5 rounded-lg bg-white/10 hover:bg-cyan-500/20 text-white/80 hover:text-cyan-300 transition-colors"
+                className="p-1.5 rounded-lg bg-white/10 hover:bg-[#5B8DEF]/25 text-white/80 hover:text-[#9dbdf7] transition-colors"
                 title="Copy Email Address"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -90,14 +90,14 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
+                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-[#9dbdf7] hover:border-[#5B8DEF]/40 transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
+                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-[#9dbdf7] hover:border-[#5B8DEF]/40 transition-colors"
                 aria-label="Send Email"
               >
                 <Mail className="w-4 h-4" />
@@ -105,7 +105,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               {/* <a
                 href={PERSONAL_INFO.waLink}
                 target='_blank'
-                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
+                className="glass-panel p-2.5 rounded-xl text-white/80 hover:text-[#9dbdf7] hover:border-[#5B8DEF]/40 transition-colors"
                 aria-label="Call Phone Number"
               >
                 <MessageCircleMore className="w-4 h-4" />
@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <div>
             © {new Date().getFullYear()} {PERSONAL_INFO.name}.
           </div>

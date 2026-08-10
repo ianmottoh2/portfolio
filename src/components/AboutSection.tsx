@@ -10,7 +10,7 @@ import { OpenCVButton } from './OpenCVButton';
 
 export const AboutSection: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12 space-y-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-40 pb-12 space-y-12">
       {/* About Header Card */}
       <GlassCard padding="large" className="border border-white/15 rounded-3xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -39,7 +39,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <div className="pt-2 flex flex-wrap gap-3">
-              <OpenCVButton className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-5 py-2.5 rounded-full text-xs font-semibold text-white shadow-lg transition-all cursor-pointer">
+              <OpenCVButton className="bg-[#0c0d10] hover:bg-[#171a1f] border border-white/15 px-5 py-2.5 rounded-full text-xs font-semibold text-white shadow-lg transition-all cursor-pointer">
                 Open Full Resume
               </OpenCVButton>
               <TabButton

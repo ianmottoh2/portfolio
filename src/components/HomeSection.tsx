@@ -27,7 +27,7 @@ export const HomeSection: React.FC = () => {
 
           <TabButton
             tab="portfolio"
-            className="bg-[#151515] hover:bg-[#222222] border border-white/15 px-4 py-2 rounded-full text-xs font-medium text-white flex items-center gap-2 self-start sm:self-auto transition-all cursor-pointer"
+            className="bg-[#0c0d10] hover:bg-[#171a1f] border border-white/15 px-4 py-2 rounded-full text-xs font-medium text-white flex items-center gap-2 self-start sm:self-auto transition-all cursor-pointer"
           >
             <span>View All Portfolio ({PROJECTS.length})</span>
             <ArrowRight className="w-3.5 h-3.5 text-white/70" />

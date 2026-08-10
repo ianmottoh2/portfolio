@@ -40,7 +40,7 @@ export const PortfolioExplorer: React.FC = () => {
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
                 portfolioCategory === cat
                   ? 'bg-[#5B8DEF] text-white shadow-sm'
-                  : 'glass-pill text-white/60 hover:text-white border border-white/10'
+                  : 'glass-pill text-white/70 hover:text-white border border-white/10'
               }`}
             >
               {cat}
@@ -50,13 +50,13 @@ export const PortfolioExplorer: React.FC = () => {
 
         {/* Search Bar */}
         <div className="relative w-full md:w-64 glass-panel rounded-full border border-white/12 flex items-center">
-          <Search className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <Search className="w-4 h-4 text-white/50 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
             type="text"
             placeholder="Search stack or title..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-transparent pl-10 pr-8 py-2 text-xs text-white placeholder-white/40 focus:outline-none"
+            className="w-full bg-transparent pl-10 pr-8 py-2 text-xs text-white placeholder-white/50 focus:outline-none"
           />
           {searchQuery && (
             <button

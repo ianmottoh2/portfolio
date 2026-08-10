@@ -26,7 +26,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-36 pb-12 space-y-8">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-40 pb-12 space-y-8">
       <div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill text-xs font-medium text-white/80 border border-white/15 mb-2">
           <Send className="w-3.5 h-3.5 text-white/60" />
@@ -35,7 +35,7 @@ export const ContactSection: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
           Let's Build Something Exceptional
         </h2>
-        <p className="text-xs sm:text-sm text-white/60 mt-1">
+        <p className="text-xs sm:text-sm text-white/70 mt-1">
           I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
       </div>
@@ -56,7 +56,7 @@ export const ContactSection: React.FC = () => {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-white/50 text-xs font-medium block">Email Address</span>
+                  <span className="text-white/60 text-xs font-medium block">Email Address</span>
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-white">{PERSONAL_INFO.email}</span>
                     <button
@@ -94,7 +94,7 @@ export const ContactSection: React.FC = () => {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-white/50 text-xs font-medium block">Location</span>
+                  <span className="text-white/60 text-xs font-medium block">Location</span>
                   <span className="font-semibold text-white">{PERSONAL_INFO.location}</span>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
                   <Linkedin className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-white/50 text-xs font-medium block">LinkedIn</span>
+                  <span className="text-white/60 text-xs font-medium block">LinkedIn</span>
                   <a
                     href={PERSONAL_INFO.linkedin}
                     target="_blank"
@@ -130,7 +130,7 @@ export const ContactSection: React.FC = () => {
               </Link> */}
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="w-full bg-[#151515] hover:bg-[#222222] border border-white/15 text-white font-semibold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
+                className="w-full bg-[#0c0d10] hover:bg-[#171a1f] border border-white/15 text-white font-semibold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
               >
                 <Mail className="w-4 h-4 text-white/70" />
                 <span>Send Email</span>

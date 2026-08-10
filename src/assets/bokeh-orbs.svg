@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Out-of-focus soft bokeh orbs: blur is baked into the gradient falloff -->
+    <radialGradient id="softA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e6eef7" stop-opacity="0.16"/>
+      <stop offset="40%" stop-color="#c6d2e0" stop-opacity="0.07"/>
+      <stop offset="72%" stop-color="#b9c6d6" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#b9c6d6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="softB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d8e1ec" stop-opacity="0.11"/>
+      <stop offset="45%" stop-color="#c0ccda" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#c0ccda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="softC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cdd7e3" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#b9c6d6" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#b9c6d6" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Faint cool accent tint (single blue accent, very subtle) -->
+    <radialGradient id="coolAmbient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5B8DEF" stop-opacity="0.055"/>
+      <stop offset="60%" stop-color="#5B8DEF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#5B8DEF" stop-opacity="0"/>
+    </radialGradient>
+    <!-- In-focus glass spheres -->
+    <radialGradient id="glassBody" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#46525f" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#232b34" stop-opacity="0.92"/>
+      <stop offset="70%" stop-color="#0e1116" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#07090c" stop-opacity="0.98"/>
+    </radialGradient>
+    <radialGradient id="spec" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dce6f0" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#dce6f0" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#dce6f0" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Bottom vignette -->
+    <radialGradient id="vignette" cx="50%" cy="44%" r="75%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#050506"/>
+  <circle cx="960" cy="440" r="760" fill="url(#coolAmbient)"/>
+
+  <!-- Large out-of-focus bokeh orbs (background depth) -->
+  <circle cx="300" cy="240" r="340" fill="url(#softB)"/>
+  <circle cx="1560" cy="190" r="430" fill="url(#softA)"/>
+  <circle cx="1690" cy="900" r="470" fill="url(#softA)"/>
+  <circle cx="170" cy="920" r="300" fill="url(#softC)"/>
+  <circle cx="1090" cy="780" r="270" fill="url(#softB)"/>
+
+  <!-- Sharp glass spheres (foreground depth) -->
+  <g>
+    <circle cx="600" cy="330" r="58" fill="url(#glassBody)"/>
+    <ellipse cx="583" cy="311" rx="27" ry="20" fill="url(#spec)"/>
+    <ellipse cx="623" cy="356" rx="33" ry="21" fill="url(#rim)" transform="rotate(34 623 356)"/>
+    <circle cx="600" cy="330" r="58" fill="none" stroke="rgba(220,230,240,0.17)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="1180" cy="250" r="34" fill="url(#glassBody)"/>
+    <ellipse cx="1169" cy="239" rx="15" ry="11" fill="url(#spec)"/>
+    <ellipse cx="1194" cy="266" rx="19" ry="12" fill="url(#rim)" transform="rotate(32 1194 266)"/>
+    <circle cx="1180" cy="250" r="34" fill="none" stroke="rgba(220,230,240,0.15)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="1500" cy="560" r="46" fill="url(#glassBody)"/>
+    <ellipse cx="1487" cy="545" rx="20" ry="15" fill="url(#spec)"/>
+    <ellipse cx="1519" cy="581" rx="26" ry="17" fill="url(#rim)" transform="rotate(30 1519 581)"/>
+    <circle cx="1500" cy="560" r="46" fill="none" stroke="rgba(220,230,240,0.16)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="520" cy="660" r="30" fill="url(#glassBody)"/>
+    <ellipse cx="511" cy="650" rx="13" ry="10" fill="url(#spec)"/>
+    <ellipse cx="531" cy="674" rx="17" ry="11" fill="url(#rim)" transform="rotate(32 531 674)"/>
+    <circle cx="520" cy="660" r="30" fill="none" stroke="rgba(220,230,240,0.14)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="210" cy="470" r="24" fill="url(#glassBody)"/>
+    <ellipse cx="203" cy="462" rx="10" ry="8" fill="url(#spec)"/>
+    <ellipse cx="219" cy="481" rx="14" ry="9" fill="url(#rim)" transform="rotate(32 219 481)"/>
+    <circle cx="210" cy="470" r="24" fill="none" stroke="rgba(220,230,240,0.14)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="862" cy="648" r="20" fill="url(#glassBody)"/>
+    <ellipse cx="856" cy="641" rx="9" ry="7" fill="url(#spec)"/>
+    <circle cx="862" cy="648" r="20" fill="none" stroke="rgba(220,230,240,0.16)" stroke-width="1"/>
+  </g>
+  <g>
+    <circle cx="1750" cy="300" r="26" fill="url(#glassBody)"/>
+    <ellipse cx="1742" cy="292" rx="11" ry="9" fill="url(#spec)"/>
+    <ellipse cx="1760" cy="312" rx="15" ry="10" fill="url(#rim)" transform="rotate(32 1760 312)"/>
+    <circle cx="1750" cy="300" r="26" fill="none" stroke="rgba(220,230,240,0.15)" stroke-width="1"/>
+  </g>
+
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+</svg>
