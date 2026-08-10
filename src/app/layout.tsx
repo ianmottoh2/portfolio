@@ -3,6 +3,7 @@ import './globals.css';
 import metaIcon from '../assets/images/metaIcon.jpeg';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import AuraBackground from '../components/AuraBackgroundDynamic';
 import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../config/site';
 import { PERSONAL_INFO, SKILL_CATEGORIES } from '../data/portfolioData';
 
@@ -97,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen text-white bg-[#060607] antialiased selection:bg-white/20 selection:text-white">
+        <AuraBackground />
         {children}
         <script
           type="application/ld+json"

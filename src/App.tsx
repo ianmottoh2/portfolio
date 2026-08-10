@@ -3,7 +3,6 @@
 import React, { useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'motion/react';
-import { BokehBackground } from './components/BokehBackground';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { NavigationProvider } from './components/NavigationContext';
@@ -41,9 +40,6 @@ export default function App({ home, portfolio, about, contact }: AppProps) {
   return (
     <NavigationProvider value={{ setActiveTab, openCVModal: handleOpenCVModal }}>
       <div className="min-h-screen text-white relative font-sans selection:bg-white/20 selection:text-white">
-        {/* Persistent Bokeh Orb Background */}
-        <BokehBackground />
-
         {/* Navigation Header */}
         <Navbar
           activeTab={activeTab}
